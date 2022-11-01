@@ -6,6 +6,6 @@ final class fugle_realtime_swiftTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(fugle_realtime_swift().text, "Hello, World!")
+        XCTAssertEqual(RealTimeTestForDemo().text, "Hello, World!")
     }
 }
