@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         Button("Hello, world!") {
             Task {
-                await RealTimeTestForDemo.fire()
+                await FugleMetaLoader().load()
             }
         }
     }
