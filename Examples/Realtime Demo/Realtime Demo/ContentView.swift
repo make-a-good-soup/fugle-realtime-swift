@@ -12,7 +12,11 @@ struct ContentView: View {
     var body: some View {
         Button("Hello, world!") {
             Task {
-                await RealTimeTestForDemo.fire()
+                let result = await FugleMetaLoader().load(token: "", symbolId: "2330")
+                let model = try? result.get()
+                if let model {
+                    print(model)
+                }
             }
         }
     }
