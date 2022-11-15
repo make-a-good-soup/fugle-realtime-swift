@@ -3,68 +3,67 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5670978229115BFB0090AF45 /* Realtime_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670978129115BFB0090AF45 /* Realtime_DemoApp.swift */; };
-		5670978429115BFB0090AF45 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670978329115BFB0090AF45 /* ContentView.swift */; };
-		5670978629115BFC0090AF45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5670978529115BFC0090AF45 /* Assets.xcassets */; };
-		5670978929115BFC0090AF45 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5670978829115BFC0090AF45 /* Preview Assets.xcassets */; };
-		5670979329115BFC0090AF45 /* Realtime_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670979229115BFC0090AF45 /* Realtime_DemoTests.swift */; };
-		5670979D29115BFC0090AF45 /* Realtime_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670979C29115BFC0090AF45 /* Realtime_DemoUITests.swift */; };
-		5670979F29115BFC0090AF45 /* Realtime_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670979E29115BFC0090AF45 /* Realtime_DemoUITestsLaunchTests.swift */; };
-		56EBBA8929116D7B00815643 /* fugle-realtime-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 56EBBA8829116D7B00815643 /* fugle-realtime-swift */; };
+		56C347F32923CAC300F60604 /* Realtime_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C347F22923CAC300F60604 /* Realtime_DemoApp.swift */; };
+		56C347F52923CAC300F60604 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C347F42923CAC300F60604 /* ContentView.swift */; };
+		56C347F72923CAC300F60604 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C347F62923CAC300F60604 /* Assets.xcassets */; };
+		56C347FA2923CAC300F60604 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C347F92923CAC300F60604 /* Preview Assets.xcassets */; };
+		56C348042923CAC300F60604 /* Realtime_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C348032923CAC300F60604 /* Realtime_DemoTests.swift */; };
+		56C3480E2923CAC300F60604 /* Realtime_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C3480D2923CAC300F60604 /* Realtime_DemoUITests.swift */; };
+		56C348102923CAC300F60604 /* Realtime_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C3480F2923CAC300F60604 /* Realtime_DemoUITestsLaunchTests.swift */; };
+		56C3481E2923CAE300F60604 /* fugle-realtime-swift in Frameworks */ = {isa = PBXBuildFile; productRef = 56C3481D2923CAE300F60604 /* fugle-realtime-swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5670978F29115BFC0090AF45 /* PBXContainerItemProxy */ = {
+		56C348002923CAC300F60604 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5670977629115BFB0090AF45 /* Project object */;
+			containerPortal = 56C347E72923CAC300F60604 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5670977D29115BFB0090AF45;
+			remoteGlobalIDString = 56C347EE2923CAC300F60604;
 			remoteInfo = "Realtime Demo";
 		};
-		5670979929115BFC0090AF45 /* PBXContainerItemProxy */ = {
+		56C3480A2923CAC300F60604 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5670977629115BFB0090AF45 /* Project object */;
+			containerPortal = 56C347E72923CAC300F60604 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5670977D29115BFB0090AF45;
+			remoteGlobalIDString = 56C347EE2923CAC300F60604;
 			remoteInfo = "Realtime Demo";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5670977E29115BFB0090AF45 /* Realtime Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realtime Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5670978129115BFB0090AF45 /* Realtime_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realtime_DemoApp.swift; sourceTree = "<group>"; };
-		5670978329115BFB0090AF45 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		5670978529115BFC0090AF45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5670978829115BFC0090AF45 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5670978E29115BFC0090AF45 /* Realtime DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Realtime DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5670979229115BFC0090AF45 /* Realtime_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realtime_DemoTests.swift; sourceTree = "<group>"; };
-		5670979829115BFC0090AF45 /* Realtime DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Realtime DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5670979C29115BFC0090AF45 /* Realtime_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realtime_DemoUITests.swift; sourceTree = "<group>"; };
-		5670979E29115BFC0090AF45 /* Realtime_DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realtime_DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		56EBBA8629116CF600815643 /* fugle-realtime-swift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "fugle-realtime-swift"; path = ../..; sourceTree = "<group>"; };
+		56C347EF2923CAC300F60604 /* Realtime Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realtime Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56C347F22923CAC300F60604 /* Realtime_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realtime_DemoApp.swift; sourceTree = "<group>"; };
+		56C347F42923CAC300F60604 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		56C347F62923CAC300F60604 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		56C347F92923CAC300F60604 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		56C347FF2923CAC300F60604 /* Realtime DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Realtime DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56C348032923CAC300F60604 /* Realtime_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realtime_DemoTests.swift; sourceTree = "<group>"; };
+		56C348092923CAC300F60604 /* Realtime DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Realtime DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56C3480D2923CAC300F60604 /* Realtime_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realtime_DemoUITests.swift; sourceTree = "<group>"; };
+		56C3480F2923CAC300F60604 /* Realtime_DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realtime_DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5670977B29115BFB0090AF45 /* Frameworks */ = {
+		56C347EC2923CAC300F60604 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56EBBA8929116D7B00815643 /* fugle-realtime-swift in Frameworks */,
+				56C3481E2923CAE300F60604 /* fugle-realtime-swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5670978B29115BFC0090AF45 /* Frameworks */ = {
+		56C347FC2923CAC300F60604 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5670979529115BFC0090AF45 /* Frameworks */ = {
+		56C348062923CAC300F60604 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,73 +73,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5670977529115BFB0090AF45 = {
+		56C347E62923CAC300F60604 = {
 			isa = PBXGroup;
 			children = (
-				56EBBA8529116CF600815643 /* Packages */,
-				5670978029115BFB0090AF45 /* Realtime Demo */,
-				5670979129115BFC0090AF45 /* Realtime DemoTests */,
-				5670979B29115BFC0090AF45 /* Realtime DemoUITests */,
-				5670977F29115BFB0090AF45 /* Products */,
-				56EBBA8729116D7B00815643 /* Frameworks */,
+				56C347F12923CAC300F60604 /* Realtime Demo */,
+				56C348022923CAC300F60604 /* Realtime DemoTests */,
+				56C3480C2923CAC300F60604 /* Realtime DemoUITests */,
+				56C347F02923CAC300F60604 /* Products */,
+				56C3481C2923CAE300F60604 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		5670977F29115BFB0090AF45 /* Products */ = {
+		56C347F02923CAC300F60604 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5670977E29115BFB0090AF45 /* Realtime Demo.app */,
-				5670978E29115BFC0090AF45 /* Realtime DemoTests.xctest */,
-				5670979829115BFC0090AF45 /* Realtime DemoUITests.xctest */,
+				56C347EF2923CAC300F60604 /* Realtime Demo.app */,
+				56C347FF2923CAC300F60604 /* Realtime DemoTests.xctest */,
+				56C348092923CAC300F60604 /* Realtime DemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5670978029115BFB0090AF45 /* Realtime Demo */ = {
+		56C347F12923CAC300F60604 /* Realtime Demo */ = {
 			isa = PBXGroup;
 			children = (
-				5670978129115BFB0090AF45 /* Realtime_DemoApp.swift */,
-				5670978329115BFB0090AF45 /* ContentView.swift */,
-				5670978529115BFC0090AF45 /* Assets.xcassets */,
-				5670978729115BFC0090AF45 /* Preview Content */,
+				56C347F22923CAC300F60604 /* Realtime_DemoApp.swift */,
+				56C347F42923CAC300F60604 /* ContentView.swift */,
+				56C347F62923CAC300F60604 /* Assets.xcassets */,
+				56C347F82923CAC300F60604 /* Preview Content */,
 			);
 			path = "Realtime Demo";
 			sourceTree = "<group>";
 		};
-		5670978729115BFC0090AF45 /* Preview Content */ = {
+		56C347F82923CAC300F60604 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				5670978829115BFC0090AF45 /* Preview Assets.xcassets */,
+				56C347F92923CAC300F60604 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		5670979129115BFC0090AF45 /* Realtime DemoTests */ = {
+		56C348022923CAC300F60604 /* Realtime DemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				5670979229115BFC0090AF45 /* Realtime_DemoTests.swift */,
+				56C348032923CAC300F60604 /* Realtime_DemoTests.swift */,
 			);
 			path = "Realtime DemoTests";
 			sourceTree = "<group>";
 		};
-		5670979B29115BFC0090AF45 /* Realtime DemoUITests */ = {
+		56C3480C2923CAC300F60604 /* Realtime DemoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5670979C29115BFC0090AF45 /* Realtime_DemoUITests.swift */,
-				5670979E29115BFC0090AF45 /* Realtime_DemoUITestsLaunchTests.swift */,
+				56C3480D2923CAC300F60604 /* Realtime_DemoUITests.swift */,
+				56C3480F2923CAC300F60604 /* Realtime_DemoUITestsLaunchTests.swift */,
 			);
 			path = "Realtime DemoUITests";
 			sourceTree = "<group>";
 		};
-		56EBBA8529116CF600815643 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				56EBBA8629116CF600815643 /* fugle-realtime-swift */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
-		56EBBA8729116D7B00815643 /* Frameworks */ = {
+		56C3481C2923CAE300F60604 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -150,124 +140,123 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5670977D29115BFB0090AF45 /* Realtime Demo */ = {
+		56C347EE2923CAC300F60604 /* Realtime Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 567097A229115BFC0090AF45 /* Build configuration list for PBXNativeTarget "Realtime Demo" */;
+			buildConfigurationList = 56C348132923CAC300F60604 /* Build configuration list for PBXNativeTarget "Realtime Demo" */;
 			buildPhases = (
-				5670977A29115BFB0090AF45 /* Sources */,
-				5670977B29115BFB0090AF45 /* Frameworks */,
-				5670977C29115BFB0090AF45 /* Resources */,
+				56C347EB2923CAC300F60604 /* Sources */,
+				56C347EC2923CAC300F60604 /* Frameworks */,
+				56C347ED2923CAC300F60604 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				56EBBA7C291162AA00815643 /* PBXTargetDependency */,
 			);
 			name = "Realtime Demo";
 			packageProductDependencies = (
-				56EBBA8829116D7B00815643 /* fugle-realtime-swift */,
+				56C3481D2923CAE300F60604 /* fugle-realtime-swift */,
 			);
 			productName = "Realtime Demo";
-			productReference = 5670977E29115BFB0090AF45 /* Realtime Demo.app */;
+			productReference = 56C347EF2923CAC300F60604 /* Realtime Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5670978D29115BFC0090AF45 /* Realtime DemoTests */ = {
+		56C347FE2923CAC300F60604 /* Realtime DemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 567097A529115BFC0090AF45 /* Build configuration list for PBXNativeTarget "Realtime DemoTests" */;
+			buildConfigurationList = 56C348162923CAC300F60604 /* Build configuration list for PBXNativeTarget "Realtime DemoTests" */;
 			buildPhases = (
-				5670978A29115BFC0090AF45 /* Sources */,
-				5670978B29115BFC0090AF45 /* Frameworks */,
-				5670978C29115BFC0090AF45 /* Resources */,
+				56C347FB2923CAC300F60604 /* Sources */,
+				56C347FC2923CAC300F60604 /* Frameworks */,
+				56C347FD2923CAC300F60604 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5670979029115BFC0090AF45 /* PBXTargetDependency */,
+				56C348012923CAC300F60604 /* PBXTargetDependency */,
 			);
 			name = "Realtime DemoTests";
 			productName = "Realtime DemoTests";
-			productReference = 5670978E29115BFC0090AF45 /* Realtime DemoTests.xctest */;
+			productReference = 56C347FF2923CAC300F60604 /* Realtime DemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5670979729115BFC0090AF45 /* Realtime DemoUITests */ = {
+		56C348082923CAC300F60604 /* Realtime DemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 567097A829115BFC0090AF45 /* Build configuration list for PBXNativeTarget "Realtime DemoUITests" */;
+			buildConfigurationList = 56C348192923CAC300F60604 /* Build configuration list for PBXNativeTarget "Realtime DemoUITests" */;
 			buildPhases = (
-				5670979429115BFC0090AF45 /* Sources */,
-				5670979529115BFC0090AF45 /* Frameworks */,
-				5670979629115BFC0090AF45 /* Resources */,
+				56C348052923CAC300F60604 /* Sources */,
+				56C348062923CAC300F60604 /* Frameworks */,
+				56C348072923CAC300F60604 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5670979A29115BFC0090AF45 /* PBXTargetDependency */,
+				56C3480B2923CAC300F60604 /* PBXTargetDependency */,
 			);
 			name = "Realtime DemoUITests";
 			productName = "Realtime DemoUITests";
-			productReference = 5670979829115BFC0090AF45 /* Realtime DemoUITests.xctest */;
+			productReference = 56C348092923CAC300F60604 /* Realtime DemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5670977629115BFB0090AF45 /* Project object */ = {
+		56C347E72923CAC300F60604 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
-					5670977D29115BFB0090AF45 = {
-						CreatedOnToolsVersion = 13.4.1;
+					56C347EE2923CAC300F60604 = {
+						CreatedOnToolsVersion = 14.1;
 					};
-					5670978D29115BFC0090AF45 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 5670977D29115BFB0090AF45;
+					56C347FE2923CAC300F60604 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 56C347EE2923CAC300F60604;
 					};
-					5670979729115BFC0090AF45 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 5670977D29115BFB0090AF45;
+					56C348082923CAC300F60604 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 56C347EE2923CAC300F60604;
 					};
 				};
 			};
-			buildConfigurationList = 5670977929115BFB0090AF45 /* Build configuration list for PBXProject "Realtime Demo" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = 56C347EA2923CAC300F60604 /* Build configuration list for PBXProject "Realtime Demo" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 5670977529115BFB0090AF45;
-			productRefGroup = 5670977F29115BFB0090AF45 /* Products */;
+			mainGroup = 56C347E62923CAC300F60604;
+			productRefGroup = 56C347F02923CAC300F60604 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5670977D29115BFB0090AF45 /* Realtime Demo */,
-				5670978D29115BFC0090AF45 /* Realtime DemoTests */,
-				5670979729115BFC0090AF45 /* Realtime DemoUITests */,
+				56C347EE2923CAC300F60604 /* Realtime Demo */,
+				56C347FE2923CAC300F60604 /* Realtime DemoTests */,
+				56C348082923CAC300F60604 /* Realtime DemoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5670977C29115BFB0090AF45 /* Resources */ = {
+		56C347ED2923CAC300F60604 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5670978929115BFC0090AF45 /* Preview Assets.xcassets in Resources */,
-				5670978629115BFC0090AF45 /* Assets.xcassets in Resources */,
+				56C347FA2923CAC300F60604 /* Preview Assets.xcassets in Resources */,
+				56C347F72923CAC300F60604 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5670978C29115BFC0090AF45 /* Resources */ = {
+		56C347FD2923CAC300F60604 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5670979629115BFC0090AF45 /* Resources */ = {
+		56C348072923CAC300F60604 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,59 +266,55 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5670977A29115BFB0090AF45 /* Sources */ = {
+		56C347EB2923CAC300F60604 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5670978429115BFB0090AF45 /* ContentView.swift in Sources */,
-				5670978229115BFB0090AF45 /* Realtime_DemoApp.swift in Sources */,
+				56C347F52923CAC300F60604 /* ContentView.swift in Sources */,
+				56C347F32923CAC300F60604 /* Realtime_DemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5670978A29115BFC0090AF45 /* Sources */ = {
+		56C347FB2923CAC300F60604 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5670979329115BFC0090AF45 /* Realtime_DemoTests.swift in Sources */,
+				56C348042923CAC300F60604 /* Realtime_DemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5670979429115BFC0090AF45 /* Sources */ = {
+		56C348052923CAC300F60604 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5670979F29115BFC0090AF45 /* Realtime_DemoUITestsLaunchTests.swift in Sources */,
-				5670979D29115BFC0090AF45 /* Realtime_DemoUITests.swift in Sources */,
+				56C348102923CAC300F60604 /* Realtime_DemoUITestsLaunchTests.swift in Sources */,
+				56C3480E2923CAC300F60604 /* Realtime_DemoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5670979029115BFC0090AF45 /* PBXTargetDependency */ = {
+		56C348012923CAC300F60604 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5670977D29115BFB0090AF45 /* Realtime Demo */;
-			targetProxy = 5670978F29115BFC0090AF45 /* PBXContainerItemProxy */;
+			target = 56C347EE2923CAC300F60604 /* Realtime Demo */;
+			targetProxy = 56C348002923CAC300F60604 /* PBXContainerItemProxy */;
 		};
-		5670979A29115BFC0090AF45 /* PBXTargetDependency */ = {
+		56C3480B2923CAC300F60604 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5670977D29115BFB0090AF45 /* Realtime Demo */;
-			targetProxy = 5670979929115BFC0090AF45 /* PBXContainerItemProxy */;
-		};
-		56EBBA7C291162AA00815643 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 56EBBA7B291162AA00815643 /* fugle-realtime-swift */;
+			target = 56C347EE2923CAC300F60604 /* Realtime Demo */;
+			targetProxy = 56C3480A2923CAC300F60604 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		567097A029115BFC0090AF45 /* Debug */ = {
+		56C348112923CAC300F60604 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -373,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -383,13 +368,13 @@
 			};
 			name = Debug;
 		};
-		567097A129115BFC0090AF45 /* Release */ = {
+		56C348122923CAC300F60604 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -427,7 +412,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -437,7 +422,7 @@
 			};
 			name = Release;
 		};
-		567097A329115BFC0090AF45 /* Debug */ = {
+		56C348142923CAC300F60604 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -466,7 +451,7 @@
 			};
 			name = Debug;
 		};
-		567097A429115BFC0090AF45 /* Release */ = {
+		56C348152923CAC300F60604 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -495,7 +480,7 @@
 			};
 			name = Release;
 		};
-		567097A629115BFC0090AF45 /* Debug */ = {
+		56C348172923CAC300F60604 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -504,18 +489,18 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A2BW4UK926;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.fugle.Realtime-DemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Realtime Demo.app/Realtime Demo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Realtime Demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Realtime Demo";
 			};
 			name = Debug;
 		};
-		567097A729115BFC0090AF45 /* Release */ = {
+		56C348182923CAC300F60604 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -524,18 +509,18 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A2BW4UK926;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.fugle.Realtime-DemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Realtime Demo.app/Realtime Demo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Realtime Demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Realtime Demo";
 			};
 			name = Release;
 		};
-		567097A929115BFC0090AF45 /* Debug */ = {
+		56C3481A2923CAC300F60604 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -553,7 +538,7 @@
 			};
 			name = Debug;
 		};
-		567097AA29115BFC0090AF45 /* Release */ = {
+		56C3481B2923CAC300F60604 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -574,38 +559,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5670977929115BFB0090AF45 /* Build configuration list for PBXProject "Realtime Demo" */ = {
+		56C347EA2923CAC300F60604 /* Build configuration list for PBXProject "Realtime Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				567097A029115BFC0090AF45 /* Debug */,
-				567097A129115BFC0090AF45 /* Release */,
+				56C348112923CAC300F60604 /* Debug */,
+				56C348122923CAC300F60604 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		567097A229115BFC0090AF45 /* Build configuration list for PBXNativeTarget "Realtime Demo" */ = {
+		56C348132923CAC300F60604 /* Build configuration list for PBXNativeTarget "Realtime Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				567097A329115BFC0090AF45 /* Debug */,
-				567097A429115BFC0090AF45 /* Release */,
+				56C348142923CAC300F60604 /* Debug */,
+				56C348152923CAC300F60604 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		567097A529115BFC0090AF45 /* Build configuration list for PBXNativeTarget "Realtime DemoTests" */ = {
+		56C348162923CAC300F60604 /* Build configuration list for PBXNativeTarget "Realtime DemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				567097A629115BFC0090AF45 /* Debug */,
-				567097A729115BFC0090AF45 /* Release */,
+				56C348172923CAC300F60604 /* Debug */,
+				56C348182923CAC300F60604 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		567097A829115BFC0090AF45 /* Build configuration list for PBXNativeTarget "Realtime DemoUITests" */ = {
+		56C348192923CAC300F60604 /* Build configuration list for PBXNativeTarget "Realtime DemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				567097A929115BFC0090AF45 /* Debug */,
-				567097AA29115BFC0090AF45 /* Release */,
+				56C3481A2923CAC300F60604 /* Debug */,
+				56C3481B2923CAC300F60604 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -613,15 +598,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		56EBBA7B291162AA00815643 /* fugle-realtime-swift */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = "fugle-realtime-swift";
-		};
-		56EBBA8829116D7B00815643 /* fugle-realtime-swift */ = {
+		56C3481D2923CAE300F60604 /* fugle-realtime-swift */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = "fugle-realtime-swift";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 5670977629115BFB0090AF45 /* Project object */;
+	rootObject = 56C347E72923CAC300F60604 /* Project object */;
 }

@@ -1,13 +1,6 @@
-//
-//  Realtime_DemoUITests.swift
-//  Realtime DemoUITests
-//
-//  Created by 洪德晟 on 2022/11/1.
-//
-
 import XCTest
 
-class Realtime_DemoUITests: XCTestCase {
+final class Realtime_DemoUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
