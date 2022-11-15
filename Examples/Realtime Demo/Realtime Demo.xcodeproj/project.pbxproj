@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46AFC3AF2923E92100A111A3 /* fugle-realtime-swift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "fugle-realtime-swift"; path = ../..; sourceTree = "<group>"; };
 		56C347EF2923CAC300F60604 /* Realtime Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realtime Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56C347F22923CAC300F60604 /* Realtime_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realtime_DemoApp.swift; sourceTree = "<group>"; };
 		56C347F42923CAC300F60604 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,9 +74,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46AFC3AE2923E92100A111A3 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				46AFC3AF2923E92100A111A3 /* fugle-realtime-swift */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		56C347E62923CAC300F60604 = {
 			isa = PBXGroup;
 			children = (
+				46AFC3AE2923E92100A111A3 /* Packages */,
 				56C347F12923CAC300F60604 /* Realtime Demo */,
 				56C348022923CAC300F60604 /* Realtime DemoTests */,
 				56C3480C2923CAC300F60604 /* Realtime DemoUITests */,
