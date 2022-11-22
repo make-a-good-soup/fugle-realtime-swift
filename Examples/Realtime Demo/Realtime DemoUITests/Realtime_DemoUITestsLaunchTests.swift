@@ -1,13 +1,6 @@
-//
-//  Realtime_DemoUITestsLaunchTests.swift
-//  Realtime DemoUITests
-//
-//  Created by 洪德晟 on 2022/11/1.
-//
-
 import XCTest
 
-class Realtime_DemoUITestsLaunchTests: XCTestCase {
+final class Realtime_DemoUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

@@ -1,14 +1,7 @@
-//
-//  Realtime_DemoTests.swift
-//  Realtime DemoTests
-//
-//  Created by 洪德晟 on 2022/11/1.
-//
-
 import XCTest
 @testable import Realtime_Demo
 
-class Realtime_DemoTests: XCTestCase {
+final class Realtime_DemoTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
