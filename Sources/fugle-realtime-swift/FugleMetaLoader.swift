@@ -3,6 +3,11 @@ import Foundation
 public class FugleMetaLoader {
 
     public init() {}
+    
+    func load(router: Router) async -> Result<Intraday<MetaData>, Error> {
+        // TODO: 待處理
+        return Error()
+    }
 
     public func load(token: String, symbolId: String) async -> Result<Intraday<MetaData>, Error> {
         var urlComponents = URLComponents()
