@@ -5,7 +5,8 @@ public class FugleMetaLoader {
     public init() {}
 
     public func load(token: String, symbolId: String) async -> Result<Intraday<MetaData>, Error> {
-        let url = IntradayRouter.meta(symbolId: symbolId, apiToken: token).url
+        let parameters = ["symbolId": symbolId, "apiToken": token]
+        let url = IntradayRouter.meta(parameters: parameters).url
 
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
