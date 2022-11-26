@@ -1,8 +1,14 @@
 import Foundation
 
+/// API Document: https://developer.fugle.tw/docs/data/intraday/overview
+
 public enum IntradayRouter {
     case meta(symbolId: String, apiToken: String)
     case quote(symbolId: String, apiToken: String)
+// TODO: add new cases
+//    case chart
+//    case dealts
+//    case volumes
 }
 
 extension IntradayRouter: APIRouter {
