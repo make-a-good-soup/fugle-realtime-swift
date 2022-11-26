@@ -1,31 +1,5 @@
 import XCTest
-
-final class MetaRouter {
-
-    let symbolId: String
-
-    let apiToken: String
-
-    let scheme: String = "https"
-
-    let host: String = "api.fugle.tw"
-
-    let basePath: String = "/realtime/v0.3/intraday"
-
-    var url: URL {
-        var components = URLComponents()
-        components.scheme = scheme
-        components.host = host
-        components.path = basePath + "/meta"
-        components.query = "symbolId=\(symbolId)&apiToken=\(apiToken)"
-        return components.url!
-    }
-
-    init(symbolId: String, apiToken: String) {
-        self.symbolId = symbolId
-        self.apiToken = apiToken
-    }
-}
+import fugle_realtime_swift
 
 final class MetaRouterTests: XCTestCase {
 
