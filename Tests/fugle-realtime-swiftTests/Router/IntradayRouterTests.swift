@@ -15,4 +15,10 @@ final class IntradayRouterTests: XCTestCase {
 
         XCTAssertEqual(sut.url, URL(string: "https://api.fugle.tw/realtime/v0.3/intraday/quote?key=value"))
     }
+    
+    func testChart() {
+        let sut = IntradayRouter.chart(parameters: parameters)
+        
+        XCTAssertEqual(sut.url, URL(string: "https://api.fugle.tw/realtime/v0.3/intraday/chart?key=value"))
+    }
 }

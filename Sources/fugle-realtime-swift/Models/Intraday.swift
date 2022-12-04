@@ -9,3 +9,8 @@ public struct MetaData: Codable {
     let info: Info
     let meta: Meta
 }
+
+public struct ChartData: Codable {
+    let info: Info
+    let chart: Chart
+}
