@@ -10,13 +10,21 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build-and-test:
 
     runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v3
+
+    - name: Select Xcode
+      run: sudo xcode-select -s /Applications/Xcode_14.1.app
+
+    - name: Xcode version
+      run: /usr/bin/xcodebuild -version
+      
     - name: Build
       run: swift build -v
+
     - name: Run tests
       run: swift test -v
