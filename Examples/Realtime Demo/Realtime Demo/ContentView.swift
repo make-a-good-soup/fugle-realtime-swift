@@ -2,14 +2,42 @@ import SwiftUI
 import fugle_realtime_swift
 
 struct ContentView: View {
+    private var apiToken: String { "" }
+
+    @State var stockName: String = "stockName"
+    @State var stockPrice: Double = 0.0
+    
     var body: some View {
-        Button("Hello, world!") {
-            Task {
-                let result = await FugleHttpLoader().loadMeta(token: "", symbolId: "2330")
-                let model = try? result.get()
-                if let model {
-                    print(model)
+        VStack {
+            Button("Hello, world!") {
+                Task {
+                    let result = await FugleHttpLoader().loadMeta(token: apiToken, symbolId: "2330")
+                    let model = try? result.get()
+                    if let model {
+                        print(model)
+                    }
                 }
+
+            }.padding(8)
+            Text(stockName)
+                .font(.system(size: 24))
+                .padding(8)
+            Text("$\(String(stockPrice))")
+                .font(.system(size: 18))
+                .padding(8)
+        }.task {
+            let parameters = ["symbolId": "2330", "apiToken": apiToken]
+            let url = WebSocketRouter.meta(parameters: parameters).url
+            let stream = WebSocketStream(url: WebSocketRouter.meta(parameters: ["symbolId": "2330", "apiToken": apiToken]).url)
+
+            do {
+                for try await message in stream {
+                    let meta = try message.meta()
+                    stockName = meta.data.meta.nameZhTw
+                    stockPrice = meta.data.meta.priceReference
+                }
+            } catch {
+                debugPrint("Oops something didn't go right")
             }
         }
     }
