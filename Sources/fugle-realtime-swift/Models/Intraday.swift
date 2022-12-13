@@ -14,3 +14,8 @@ public struct ChartData: Codable {
     let info: Info
     let chart: Chart
 }
+
+public struct DealtsData: Codable {
+    let info: Info
+    let dealts: [Dealt]
+}
