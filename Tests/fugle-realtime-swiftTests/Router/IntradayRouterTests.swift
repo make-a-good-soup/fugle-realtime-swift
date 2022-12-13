@@ -27,4 +27,10 @@ final class IntradayRouterTests: XCTestCase {
         
         XCTAssertEqual(sut.url, URL(string: "https://api.fugle.tw/realtime/v0.3/intraday/dealts?key=value"))
     }
+    
+    func testVolumes() {
+        let sut = IntradayRouter.volumes(parameters: parameters)
+        
+        XCTAssertEqual(sut.url, URL(string: "https://api.fugle.tw/realtime/v0.3/intraday/volumes?key=value"))
+    }
 }

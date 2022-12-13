@@ -19,3 +19,8 @@ public struct DealtsData: Codable {
     let info: Info
     let dealts: [Dealt]
 }
+
+public struct VolumesData: Codable {
+    let info: Info
+    let volumes: [Volume]
+}

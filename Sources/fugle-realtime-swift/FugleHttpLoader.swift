@@ -51,4 +51,24 @@ public class FugleHttpLoader {
             return .failure(error)
         }
     }
+    
+    /// 提供盤中個股即時分價量
+    ///
+    /// - Parameters:
+    ///     - token: realtime api token
+    ///     - symbolId: 個股、指數識別代碼
+    ///     - oddLot: 設置 true 回傳零股行情。預設值：false
+    ///
+    public func loadVolumes(token: String, symbolId: String, oddLot: Bool = false) async -> Result<Intraday<VolumesData>, Error> {
+        let parameters = ["symbolId": symbolId, "apiToken": token, "oddLot": String(oddLot)]
+        let url = IntradayRouter.volumes(parameters: parameters).url
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let volumes = try JSONDecoder().decode(Intraday<VolumesData>.self, from: data)
+            return .success(volumes)
+        } catch {
+            return .failure(error)
+        }
+    }
 }

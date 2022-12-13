@@ -9,8 +9,7 @@ public enum IntradayRouter {
     case quote(parameters: Parameters)
     case chart(parameters: Parameters)
     case dealts(parameters: Parameters)
-    // TODO: add new cases
-    //    case volumes
+    case volumes(parameters: Parameters)
 }
 
 extension IntradayRouter: APIRouter {
@@ -19,7 +18,8 @@ extension IntradayRouter: APIRouter {
         case let .meta(parameters),
             let .quote(parameters),
             let .chart(parameters),
-            let .dealts(parameters):
+            let .dealts(parameters),
+            let .volumes(parameters):
             return parameters
         }
     }
@@ -34,6 +34,8 @@ extension IntradayRouter: APIRouter {
             return "/chart"
         case .dealts:
             return "/dealts"
+        case .volumes:
+            return "/volumes"
         }
     }
 }
