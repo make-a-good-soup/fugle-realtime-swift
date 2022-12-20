@@ -23,7 +23,6 @@ public class FugleHttpLoader {
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
-            print("data: \(data)")
             let chart = try JSONDecoder().decode(Intraday<ChartData>.self, from: data)
             return .success(chart)
         } catch {
@@ -46,7 +45,6 @@ public class FugleHttpLoader {
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
-            print("data: \(data)")
             let dealts = try JSONDecoder().decode(Intraday<DealtsData>.self, from: data)
             return .success(dealts)
         } catch {
