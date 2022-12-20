@@ -8,5 +8,5 @@ struct Info: Codable {
     let symbolId: String
     let countryCode: String
     let timeZone: String
-    let lastUpdatedAt: String
+    let lastUpdatedAt: String?
 }
