@@ -1,12 +1,12 @@
 import Foundation
 
-struct Info: Codable {
-    let date: String
-    let type: String
-    let exchange: String
-    let market: String
-    let symbolId: String
-    let countryCode: String
-    let timeZone: String
-    let lastUpdatedAt: String?
+public struct Info: Codable {
+    public let date: String
+    public let type: String
+    public let exchange: String
+    public let market: String
+    public let symbolId: String
+    public let countryCode: String
+    public let timeZone: String
+    public let lastUpdatedAt: String?
 }
