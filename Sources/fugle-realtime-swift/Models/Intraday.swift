@@ -10,6 +10,11 @@ public struct MetaData: Codable {
     public let meta: Meta
 }
 
+public struct QuoteData: Codable {
+    let info: Info
+    let quote: Quote
+}
+
 public struct ChartData: Codable {
     let info: Info
     let chart: Chart
