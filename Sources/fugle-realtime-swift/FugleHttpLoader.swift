@@ -1,18 +1,28 @@
 import Foundation
 
 public class FugleHttpLoader {
+    private let httpClient: HTTPClient
     
-    public init() {}
+    public init(httpClient: HTTPClient = URLSessionHTTPClient()) {
+        self.httpClient = httpClient
+    }
     
     public func loadMeta(token: String, symbolId: String) async -> Result<Intraday<MetaData>, Error> {
         let parameters = ["symbolId": symbolId, "apiToken": token]
         let url = IntradayRouter.meta(parameters: parameters).url
         
-        do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            let meta = try JSONDecoder().decode(Intraday<MetaData>.self, from: data)
-            return .success(meta)
-        } catch {
+        let result = await httpClient.perform(url: url)
+        
+        switch result {
+        case let .success((data, _)):
+            do {
+                let meta = try JSONDecoder().decode(Intraday<MetaData>.self, from: data)
+                return .success(meta)
+            } catch {
+                return .failure(error)
+            }
+            
+        case let .failure(error):
             return .failure(error)
         }
     }

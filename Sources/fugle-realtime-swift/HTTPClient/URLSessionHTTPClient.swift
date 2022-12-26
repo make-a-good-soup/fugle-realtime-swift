@@ -9,17 +9,16 @@ public final class URLSessionHTTPClient: HTTPClient {
     
     private struct UnexpectedValuesRepresentation: Error {}
     
-    public func perform(request: URLRequest, completion: @escaping (HTTPClient.Result) -> Void) {
-        session.dataTask(with: request) { data, response, error in
-            completion(Result {
-                if let error = error {
-                    throw error
-                } else if let data = data, let response = response as? HTTPURLResponse {
-                    return (data, response)
-                } else {
-                    throw UnexpectedValuesRepresentation()
-                }
-            })
-        }.resume()
+    public func perform(url: URL) async -> HTTPClient.Result {
+        do {
+            let (data, response) = try await session.data(from: url)
+            if let response = response as? HTTPURLResponse {
+                return Result.success((data, response))
+            } else {
+                return Result.failure(UnexpectedValuesRepresentation())
+            }
+        } catch {
+            return Result.failure(error)
+        }
     }
 }
