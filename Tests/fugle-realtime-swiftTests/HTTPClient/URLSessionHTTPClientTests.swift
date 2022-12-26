@@ -22,50 +22,51 @@ class URLSessionHTTPClientTests: XCTestCase {
         XCTAssertNotNil(receivedError)
     }
 
-//    func test_getFromURL_failsOnAllInvalidRepresentationCases() async {
-//        /*
-//         These cases should *never* happen, however as `URLSession` represents these fields as optional
-//         it is possible in some obscure way that this state _could_ exist.
-//         | Data?    | URLResponse?      | Error?   |
-//         |----------|-------------------|----------|
-//         | nil      | nil               | nil      |
-//         | nil      | URLResponse       | nil      |
-//         | value    | nil               | nil      |
-//         | value    | nil               | value    |
-//         | nil      | URLResponse       | value    |
-//         | nil      | HTTPURLResponse   | value    |
-//         | value    | URLResponse       | value    |
-//         | value    | HTTPURLResponse   | value    |
-//         | value    | URLResponse       | nil      |
-//         */
-//
-//        let result1 = await resultErrorFor((data: nil, response: nil, error: nil))
-//        XCTAssertNotNil(result1)
-//
-//        let result2 = await resultErrorFor((data: nil, response: nonHTTPURLResponse(), error: nil))
-//        XCTAssertNotNil(result2)
-//
-//        let result3 = await resultErrorFor((data: anyData(), response: nil, error: nil))
-//        XCTAssertNotNil(result3)
-//
-//        let result4 = await resultErrorFor((data: anyData(), response: nil, error: anyNSError()))
-//        XCTAssertNotNil(result4)
-//
-//        let resul5 = await resultErrorFor((data: nil, response: nonHTTPURLResponse(), error: anyNSError()))
-//        XCTAssertNotNil(resul5)
-//
-//        let result6 = await resultErrorFor((data: nil, response: anyHTTPURLResponse(), error: anyNSError()))
-//        XCTAssertNotNil(result6)
-//
-//        let result7 = await resultErrorFor((data: anyData(), response: nonHTTPURLResponse(), error: anyNSError()))
-//        XCTAssertNotNil(result7)
-//
-//        let result8 = await resultErrorFor((data: anyData(), response: anyHTTPURLResponse(), error: anyNSError()))
-//        XCTAssertNotNil(result8)
-//
-//        let result9 = await resultErrorFor((data: anyData(), response: nonHTTPURLResponse(), error: nil))
-//        XCTAssertNotNil(result9)
-//    }
+    // FIXME: 測試會有未知的錯誤，待調整
+    //    func test_getFromURL_failsOnAllInvalidRepresentationCases() async {
+    //        /*
+    //         These cases should *never* happen, however as `URLSession` represents these fields as optional
+    //         it is possible in some obscure way that this state _could_ exist.
+    //         | Data?    | URLResponse?      | Error?   |
+    //         |----------|-------------------|----------|
+    //         | nil      | nil               | nil      |
+    //         | nil      | URLResponse       | nil      |
+    //         | value    | nil               | nil      |
+    //         | value    | nil               | value    |
+    //         | nil      | URLResponse       | value    |
+    //         | nil      | HTTPURLResponse   | value    |
+    //         | value    | URLResponse       | value    |
+    //         | value    | HTTPURLResponse   | value    |
+    //         | value    | URLResponse       | nil      |
+    //         */
+    //
+    //        let result1 = await resultErrorFor((data: nil, response: nil, error: nil))
+    //        XCTAssertNotNil(result1)
+    //
+    //        let result2 = await resultErrorFor((data: nil, response: nonHTTPURLResponse(), error: nil))
+    //        XCTAssertNotNil(result2)
+    //
+    //        let result3 = await resultErrorFor((data: anyData(), response: nil, error: nil))
+    //        XCTAssertNotNil(result3)
+    //
+    //        let result4 = await resultErrorFor((data: anyData(), response: nil, error: anyNSError()))
+    //        XCTAssertNotNil(result4)
+    //
+    //        let resul5 = await resultErrorFor((data: nil, response: nonHTTPURLResponse(), error: anyNSError()))
+    //        XCTAssertNotNil(resul5)
+    //
+    //        let result6 = await resultErrorFor((data: nil, response: anyHTTPURLResponse(), error: anyNSError()))
+    //        XCTAssertNotNil(result6)
+    //
+    //        let result7 = await resultErrorFor((data: anyData(), response: nonHTTPURLResponse(), error: anyNSError()))
+    //        XCTAssertNotNil(result7)
+    //
+    //        let result8 = await resultErrorFor((data: anyData(), response: anyHTTPURLResponse(), error: anyNSError()))
+    //        XCTAssertNotNil(result8)
+    //
+    //        let result9 = await resultErrorFor((data: anyData(), response: nonHTTPURLResponse(), error: nil))
+    //        XCTAssertNotNil(result9)
+    //    }
 
     func test_getFromURL_succeedsOnHTTPURLResponseWithData() async {
         let data = anyData()
@@ -139,7 +140,7 @@ class URLSessionHTTPClientTests: XCTestCase {
     }
 
     private func anyNSError() -> NSError {
-      return NSError(domain: "any error", code: 0)
+        return NSError(domain: "any error", code: 0)
     }
 
     private func anyData() -> Data {
