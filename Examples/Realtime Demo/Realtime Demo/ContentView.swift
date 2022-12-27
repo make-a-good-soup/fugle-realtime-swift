@@ -2,7 +2,7 @@ import SwiftUI
 import fugle_realtime_swift
 
 struct ContentView: View {
-    private var apiToken: String { "" }
+    private var apiToken: String { "demo" }
 
     @State var stockName: String = "stockName"
     @State var stockPrice: Double = 0.0
@@ -11,7 +11,7 @@ struct ContentView: View {
         VStack {
             Button("Hello, world!") {
                 Task {
-                    let result = await FugleHttpLoader().loadMeta(token: apiToken, symbolId: "2330")
+                    let result = await FugleHttpLoader().loadMeta(token: apiToken, symbolId: "2884")
                     let model = try? result.get()
                     if let model {
                         print(model)
@@ -26,9 +26,8 @@ struct ContentView: View {
                 .font(.system(size: 18))
                 .padding(8)
         }.task {
-            let parameters = ["symbolId": "2330", "apiToken": apiToken]
-            let url = WebSocketRouter.meta(parameters: parameters).url
-            let stream = WebSocketStream(url: WebSocketRouter.meta(parameters: ["symbolId": "2330", "apiToken": apiToken]).url)
+            let parameters = ["symbolId": "2884", "apiToken": apiToken]
+            let stream = WebSocketStream(url: WebSocketRouter.meta(parameters: parameters).url)
 
             do {
                 for try await message in stream {
