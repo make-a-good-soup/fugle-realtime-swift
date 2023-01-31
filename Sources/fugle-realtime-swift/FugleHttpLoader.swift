@@ -27,6 +27,26 @@ public class FugleHttpLoader {
         }
     }
     
+    /// 提供盤中個股/指數逐筆交易金額、狀態、最佳五檔及統計資訊
+    ///
+    /// - Parameters:
+    ///     - token: realtime api token
+    ///     - symbolId: 個股、指數識別代碼
+    ///     - oddLot: 設置 true 回傳零股行情。預設值：false
+    ///
+    public func loadQuote(token: String, symbolId: String, oddLot: Bool = false) async -> Result<Intraday<QuoteData>, Error> {
+        let parameters = ["symbolId": symbolId, "apiToken": token, "oddLot": String(oddLot)]
+        let url = IntradayRouter.quote(parameters: parameters).url
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let quote = try JSONDecoder().decode(Intraday<QuoteData>.self, from: data)
+            return .success(quote)
+        } catch {
+            return .failure(error)
+        }
+    }
+    
     public func loadChart(token: String, symbolId: String) async -> Result<Intraday<ChartData>, Error> {
         let parameters = ["symbolId": symbolId, "apiToken": token]
         let url = IntradayRouter.chart(parameters: parameters).url
