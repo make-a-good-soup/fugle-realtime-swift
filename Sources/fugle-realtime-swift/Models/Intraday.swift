@@ -11,8 +11,8 @@ public struct MetaData: Codable {
 }
 
 public struct ChartData: Codable {
-    let info: Info
-    let chart: Chart
+    public let info: Info
+    public let chart: Chart
 }
 
 public struct DealtsData: Codable {
