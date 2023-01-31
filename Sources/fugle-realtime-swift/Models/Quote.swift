@@ -74,7 +74,7 @@ struct Trade: Codable {
     let ask: Double? // 最新一筆試撮賣出價
     let price: Double? // 最新一筆試撮成交價
     let volume: Double? // 最新一筆試撮成交量
-    let serial: String? // 最新一筆成交之序號
+    let serial: Double? // 最新一筆成交之序號
 }
 
 struct Trial: Codable {
