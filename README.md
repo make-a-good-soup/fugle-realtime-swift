@@ -6,11 +6,8 @@
 
 ## TODO
 
-- [ ] Loader 支援其他資料類型
-- [ ] Socket 支援其他資料類型
-- [ ] 抽出 `HTTPClient` 與新增測試 
-- [ ] 在 info.plist 新增 apiToken 方便輸入用戶 token
-- [ ] 完善 Demo App
+- [ ] Demo App 新增 Tab bar
+- [ ] Demo App 新增 Socket page
 
 ## Reference
 
