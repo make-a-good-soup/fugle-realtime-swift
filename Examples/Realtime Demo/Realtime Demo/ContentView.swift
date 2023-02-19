@@ -29,27 +29,35 @@ struct ContentView: View {
     private let types = DataType.allCases
     
     var body: some View {
-        VStack {
-            Text(title)
-                .font(.title)
-                .frame(height: 50)
-            ScrollView {
-                Text(jsonString)
-                    .modifier(ConsoleLabel())
+        TabView {
+            VStack {
+                Text(title)
+                    .font(.title)
+                    .frame(height: 50)
+                ScrollView {
+                    Text(jsonString)
+                        .modifier(ConsoleLabel())
+                }
+                .modifier(ConsoleView())
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(DataType.allCases, id: \.rawValue) { type in
+                            Button(type.buttonTitle) {
+                                title = type.title
+                                jsonString = "Loading..."
+                                loadData(type: type)
+                            }.modifier(LoadButton())
+                        }
+                    }.padding([.horizontal, .bottom])
+                }
+            }.tabItem {
+                Label("HTTP", systemImage: "network")
             }
-            .modifier(ConsoleView())
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ForEach(DataType.allCases, id: \.rawValue) { type in
-                        Button(type.buttonTitle) {
-                            title = type.title
-                            jsonString = "Loading..."
-                            loadData(type: type)
-                        }.modifier(LoadButton())
-                    }
-                }.padding([.horizontal])
+
+            Text("WebSocket").tabItem {
+                Label("WebSocket", systemImage: "antenna.radiowaves.left.and.right")
             }
-        }
+        }.accentColor(.teal)
     }
 
     private func loadData(type: DataType) {
