@@ -92,8 +92,7 @@ private struct LoadButton: ViewModifier {
             .font(.headline)
             .padding()
             .frame(width: 120, height: 44)
-            .background(.teal)
-            .foregroundColor(.white)
+            .foregroundColor(.blue)
             .cornerRadius(44)
     }
 }
