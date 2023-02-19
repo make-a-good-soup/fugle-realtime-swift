@@ -2,8 +2,11 @@ import SwiftUI
 import fugle_realtime_swift
 
 struct WebSocketView: View {
-    let symbolId: String
-    let apiToken: String
+    let config: APIConfig
+
+    private var apiToken: String { config.apiToken }
+
+    private var symbolId: String { config.symbolId }
 
     @State var stockName: String = "stockName"
     @State var stockPrice: Double = 0.0
@@ -35,6 +38,6 @@ struct WebSocketView: View {
 
 struct WebSocketView_Previews: PreviewProvider {
     static var previews: some View {
-        WebSocketView(symbolId: "2884", apiToken: "demo")
+        WebSocketView(config: .demo)
     }
 }

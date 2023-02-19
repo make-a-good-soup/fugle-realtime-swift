@@ -5,13 +5,10 @@ struct ContentView: View {
     private let gradient = LinearGradient(colors: [.orange, .green],
                                           startPoint: .topLeading,
                                           endPoint: .bottomTrailing)
-    private var symbolId: String { "2884" }
 
-    private var apiToken: String { "demo" }
+    private let httpView: HTTPView = HTTPView(config: .demo)
 
-    private var httpView: HTTPView { HTTPView(symbolId: symbolId, apiToken: apiToken) }
-
-    private var WwebSocketView: WebSocketView { WebSocketView(symbolId: symbolId, apiToken: apiToken) }
+    private let WwebSocketView: WebSocketView = WebSocketView(config: .demo)
 
     var body: some View {
         TabView {

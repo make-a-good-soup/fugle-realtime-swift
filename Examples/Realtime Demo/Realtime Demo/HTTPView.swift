@@ -2,13 +2,16 @@ import SwiftUI
 import fugle_realtime_swift
 
 struct HTTPView: View {
-    let symbolId: String
-    let apiToken: String
-
+    let config: APIConfig
+    
+    private var apiToken: String { config.apiToken }
+    
+    private var symbolId: String { config.symbolId }
+    
     @State var title: String = ""
-
+    
     @State var jsonString: String = "Tap Button to print data"
-
+    
     var body: some View {
         VStack {
             Text(title)
@@ -32,7 +35,7 @@ struct HTTPView: View {
             }
         }
     }
-
+    
     private func loadData(type: DataType) {
         title = type.title
         Task {
@@ -40,7 +43,7 @@ struct HTTPView: View {
             updateJSONString(model)
         }
     }
-
+    
     private func getModel(type: DataType) async -> Encodable {
         switch type {
         case .meta:
@@ -54,7 +57,7 @@ struct HTTPView: View {
             return try? result.get()
         }
     }
-
+    
     private func updateJSONString(_ model: Encodable) {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
@@ -98,7 +101,7 @@ private struct LoadButton: ViewModifier {
 
 struct HTTPView_Previews: PreviewProvider {
     static var previews: some View {
-        HTTPView(symbolId: "2884", apiToken: "demo")
+        HTTPView(config: .demo)
     }
 }
 
@@ -106,7 +109,7 @@ private enum DataType: String, CaseIterable {
     case meta
     case quote
     case chart
-
+    
     var title: String {
         switch (self) {
         case .meta: return "Meta"
@@ -114,6 +117,6 @@ private enum DataType: String, CaseIterable {
         case .chart: return "Chart"
         }
     }
-
+    
     var buttonTitle: String { "Get \(title)" }
 }
