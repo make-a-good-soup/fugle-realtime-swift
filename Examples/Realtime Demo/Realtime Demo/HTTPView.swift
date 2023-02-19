@@ -2,9 +2,8 @@ import SwiftUI
 import fugle_realtime_swift
 
 struct HTTPView: View {
-    private var symbolId: String { "2884" }
-
-    private var apiToken: String { "demo" }
+    let symbolId: String
+    let apiToken: String
 
     @State var title: String = ""
 
@@ -99,7 +98,7 @@ private struct LoadButton: ViewModifier {
 
 struct HTTPView_Previews: PreviewProvider {
     static var previews: some View {
-        HTTPView()
+        HTTPView(symbolId: "2884", apiToken: "demo")
     }
 }
 
