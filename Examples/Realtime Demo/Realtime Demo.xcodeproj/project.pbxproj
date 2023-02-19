@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		56049E3629A20BE400E8E551 /* HTTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56049E3529A20BE400E8E551 /* HTTPView.swift */; };
+		56049E3829A20E4D00E8E551 /* WebSocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56049E3729A20E4D00E8E551 /* WebSocketView.swift */; };
 		56C347F32923CAC300F60604 /* Realtime_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C347F22923CAC300F60604 /* Realtime_DemoApp.swift */; };
 		56C347F52923CAC300F60604 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C347F42923CAC300F60604 /* ContentView.swift */; };
 		56C347F72923CAC300F60604 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56C347F62923CAC300F60604 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		56049E3529A20BE400E8E551 /* HTTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPView.swift; sourceTree = "<group>"; };
+		56049E3729A20E4D00E8E551 /* WebSocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketView.swift; sourceTree = "<group>"; };
 		56C347EF2923CAC300F60604 /* Realtime Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realtime Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56C347F22923CAC300F60604 /* Realtime_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realtime_DemoApp.swift; sourceTree = "<group>"; };
 		56C347F42923CAC300F60604 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				56C347F22923CAC300F60604 /* Realtime_DemoApp.swift */,
 				56C347F42923CAC300F60604 /* ContentView.swift */,
 				56049E3529A20BE400E8E551 /* HTTPView.swift */,
+				56049E3729A20E4D00E8E551 /* WebSocketView.swift */,
 				56C347F62923CAC300F60604 /* Assets.xcassets */,
 				56C347F82923CAC300F60604 /* Preview Content */,
 			);
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56049E3829A20E4D00E8E551 /* WebSocketView.swift in Sources */,
 				56C347F52923CAC300F60604 /* ContentView.swift in Sources */,
 				56049E3629A20BE400E8E551 /* HTTPView.swift in Sources */,
 				56C347F32923CAC300F60604 /* Realtime_DemoApp.swift in Sources */,

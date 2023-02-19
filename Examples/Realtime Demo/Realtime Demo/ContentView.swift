@@ -17,10 +17,10 @@ struct ContentView: View {
                 Label("HTTP", systemImage: "network")
             }
 
-            Text("WebSocket").tabItem {
+            WebSocketView().tabItem {
                 Label("WebSocket", systemImage: "antenna.radiowaves.left.and.right")
             }
-        }.accentColor(.blue)
+        }.accentColor(.black)
     }
 }
 
