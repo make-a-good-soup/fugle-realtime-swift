@@ -38,4 +38,4 @@ If you encounter any issues or find any bugs while using Fugle Realtime Swift, f
 
 ## License
 
-Fugle Realtime Swift is released under the MIT license. See [LICENSE](LICENSE) for details.
+Fugle Realtime Swift is released under the MIT license. See [LICENSE](https://github.com/make-a-good-soup/fugle-realtime-swift/blob/main/LICENSE) for details.
