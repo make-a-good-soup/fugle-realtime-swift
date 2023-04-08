@@ -4,7 +4,7 @@ import Foundation
 
 public enum IntradayRouter {
     public typealias Parameters = [String: String]
-    
+
     case meta(parameters: Parameters)
     case quote(parameters: Parameters)
     case chart(parameters: Parameters)
@@ -13,17 +13,17 @@ public enum IntradayRouter {
 }
 
 extension IntradayRouter: APIRouter {
-    public var parameters: [String : String]? {
+    public var parameters: [String: String]? {
         switch self {
         case let .meta(parameters),
-            let .quote(parameters),
-            let .chart(parameters),
-            let .dealts(parameters),
-            let .volumes(parameters):
+             let .quote(parameters),
+             let .chart(parameters),
+             let .dealts(parameters),
+             let .volumes(parameters):
             return parameters
         }
     }
-    
+
     public var path: String {
         switch self {
         case .meta:

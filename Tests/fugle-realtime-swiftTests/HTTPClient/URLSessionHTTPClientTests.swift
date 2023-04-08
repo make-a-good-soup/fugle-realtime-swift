@@ -1,5 +1,5 @@
-import XCTest
 import fugle_realtime_swift
+import XCTest
 
 class URLSessionHTTPClientTests: XCTestCase {
     override func setUp() {
