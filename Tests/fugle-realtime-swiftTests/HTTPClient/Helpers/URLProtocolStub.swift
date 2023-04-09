@@ -29,11 +29,11 @@ class URLProtocolStub: URLProtocol {
     }
 
     override class func canInit(with _: URLRequest) -> Bool {
-        return true
+        true
     }
 
     override class func canonicalRequest(for request: URLRequest) -> URLRequest {
-        return request
+        request
     }
 
     override func startLoading() {

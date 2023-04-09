@@ -22,7 +22,7 @@ public extension APIRouter {
         components.host = host
         components.path = basePath + path
 
-        if let parameters = parameters {
+        if let parameters {
             components.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
         }
 

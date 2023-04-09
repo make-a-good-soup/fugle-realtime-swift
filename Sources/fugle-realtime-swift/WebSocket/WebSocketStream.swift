@@ -21,7 +21,7 @@ public class WebSocketStream {
 
 extension WebSocketStream: AsyncSequence {
     public func makeAsyncIterator() -> AsyncIterator {
-        guard let stream = stream else {
+        guard let stream else {
             fatalError("stream was not initialized")
         }
         socket.resume()
