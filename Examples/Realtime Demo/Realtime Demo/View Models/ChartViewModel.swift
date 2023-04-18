@@ -49,24 +49,48 @@ class ChartViewModel: ObservableObject {
         )
     }
 
-    // FIXME: 待修正 X 軸
     private func xAxisChartDataAndItems(_ data: ChartData) -> (ChartAxisData, [ChartViewItem]) {
         let timezone = TimeZone(secondsFromGMT: data.meta.gmtOffset) ?? .gmt
         dateFormatter.timeZone = timezone
+        dateFormatter.dateFormat = "H"
+
+        var xAxisDateComponents = Set<DateComponents>()
+        if let startTimestamp = data.indicators.first?.timestamp {
+            xAxisDateComponents = getDateComponents(startDate: startTimestamp, endDate: data.meta.regularTradingPeriodEndDate, timezone: timezone)
+        }
 
 
-        let map = [String: String]()
+        var map = [String: String]()
         var axisEnd: Int
 
         var items = [ChartViewItem]()
 
-        for (_, value) in data.indicators.enumerated() {
+        for (index, value) in data.indicators.enumerated() {
+            let dc = value.timestamp.dateComponents(timeZone: timezone)
+            if xAxisDateComponents.contains(dc) {
+                map[String(index)] = dateFormatter.string(from: value.timestamp)
+                xAxisDateComponents.remove(dc)
+            }
 
             items.append(ChartViewItem(
                 timestamp: value.timestamp,
                 value: value.close))
         }
         axisEnd = items.count - 1
+
+        if var date = items.last?.timestamp,
+           date >= data.meta.regularTradingPeriodStartDate &&
+            date < data.meta.regularTradingPeriodEndDate {
+            while date < data.meta.regularTradingPeriodEndDate {
+                axisEnd += 1
+                date = Calendar.current.date(byAdding: .minute, value: 2, to: date)!
+                let dc = date.dateComponents(timeZone: timezone)
+                if xAxisDateComponents.contains(dc) {
+                    map[String(axisEnd)] = dateFormatter.string(from: date)
+                    xAxisDateComponents.remove(dc)
+                }
+            }
+        }
 
         let xAxisData = ChartAxisData(
             axisStart: 0,
@@ -75,6 +99,20 @@ class ChartViewModel: ObservableObject {
             map: map)
 
         return (xAxisData, items)
+    }
+
+    private func getDateComponents(startDate: Date, endDate: Date, timezone: TimeZone) -> Set<DateComponents> {
+        let component: Calendar.Component = .hour
+        let value: Int = 1
+
+        var set  = Set<DateComponents>()
+        var date = startDate
+
+        while date <= endDate {
+            date = Calendar.current.date(byAdding: component, value: value, to: date)!
+            set.insert(date.dateComponents(timeZone: timezone))
+        }
+        return set
     }
 
     private func yAxisChartData(_ data: ChartData) -> ChartAxisData {
