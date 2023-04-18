@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		56049E3629A20BE400E8E551 /* HTTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56049E3529A20BE400E8E551 /* HTTPView.swift */; };
 		56049E3829A20E4D00E8E551 /* WebSocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56049E3729A20E4D00E8E551 /* WebSocketView.swift */; };
+		56121C1F29E26FD40055BD28 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56121C1E29E26FD40055BD28 /* ChartView.swift */; };
+		56121C2229E2703A0055BD28 /* ChartViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56121C2129E2703A0055BD28 /* ChartViewData.swift */; };
+		56121C2529E270750055BD28 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56121C2429E270750055BD28 /* ChartViewModel.swift */; };
+		56121C2729E271610055BD28 /* FetchPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56121C2629E271610055BD28 /* FetchPhase.swift */; };
+		56121C2A29E272AF0055BD28 /* StocksAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56121C2929E272AF0055BD28 /* StocksAPI.swift */; };
+		56121C2C29E272F30055BD28 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56121C2B29E272F30055BD28 /* Chart.swift */; };
+		56121C2F29E2ED8C0055BD28 /* Foundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56121C2E29E2ED8C0055BD28 /* Foundation+Extensions.swift */; };
+		56121C3229E2EF1D0055BD28 /* Chart_Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56121C3129E2EF1D0055BD28 /* Chart_Stubs.swift */; };
+		56121C3429E2F59E0055BD28 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56121C3329E2F59E0055BD28 /* Utils.swift */; };
 		562EA7E929A2131D00F781CE /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562EA7E829A2131D00F781CE /* APIConfig.swift */; };
 		56C347F32923CAC300F60604 /* Realtime_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C347F22923CAC300F60604 /* Realtime_DemoApp.swift */; };
 		56C347F52923CAC300F60604 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C347F42923CAC300F60604 /* ContentView.swift */; };
@@ -40,6 +49,15 @@
 /* Begin PBXFileReference section */
 		56049E3529A20BE400E8E551 /* HTTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPView.swift; sourceTree = "<group>"; };
 		56049E3729A20E4D00E8E551 /* WebSocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketView.swift; sourceTree = "<group>"; };
+		56121C1E29E26FD40055BD28 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		56121C2129E2703A0055BD28 /* ChartViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewData.swift; sourceTree = "<group>"; };
+		56121C2429E270750055BD28 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
+		56121C2629E271610055BD28 /* FetchPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPhase.swift; sourceTree = "<group>"; };
+		56121C2929E272AF0055BD28 /* StocksAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksAPI.swift; sourceTree = "<group>"; };
+		56121C2B29E272F30055BD28 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		56121C2E29E2ED8C0055BD28 /* Foundation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extensions.swift"; sourceTree = "<group>"; };
+		56121C3129E2EF1D0055BD28 /* Chart_Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart_Stubs.swift; sourceTree = "<group>"; };
+		56121C3329E2F59E0055BD28 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		562EA7E829A2131D00F781CE /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		56C347EF2923CAC300F60604 /* Realtime Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realtime Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56C347F22923CAC300F60604 /* Realtime_DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realtime_DemoApp.swift; sourceTree = "<group>"; };
@@ -79,6 +97,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56121C1D29E26FC70055BD28 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				56121C1E29E26FD40055BD28 /* ChartView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		56121C2029E2702A0055BD28 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				56121C2129E2703A0055BD28 /* ChartViewData.swift */,
+				56121C2629E271610055BD28 /* FetchPhase.swift */,
+				56121C2B29E272F30055BD28 /* Chart.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		56121C2329E270670055BD28 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				56121C2429E270750055BD28 /* ChartViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		56121C2829E272A10055BD28 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				56121C2929E272AF0055BD28 /* StocksAPI.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		56121C2D29E2ED7F0055BD28 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				56121C2E29E2ED8C0055BD28 /* Foundation+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		56121C3029E2EF010055BD28 /* Mocks & Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				56121C3129E2EF1D0055BD28 /* Chart_Stubs.swift */,
+			);
+			path = "Mocks & Stubs";
+			sourceTree = "<group>";
+		};
 		56C347E62923CAC300F60604 = {
 			isa = PBXGroup;
 			children = (
@@ -103,13 +171,20 @@
 		56C347F12923CAC300F60604 /* Realtime Demo */ = {
 			isa = PBXGroup;
 			children = (
-				56C347F22923CAC300F60604 /* Realtime_DemoApp.swift */,
 				56C347F42923CAC300F60604 /* ContentView.swift */,
 				56049E3529A20BE400E8E551 /* HTTPView.swift */,
 				56049E3729A20E4D00E8E551 /* WebSocketView.swift */,
-				56C347F62923CAC300F60604 /* Assets.xcassets */,
-				56C347F82923CAC300F60604 /* Preview Content */,
 				562EA7E829A2131D00F781CE /* APIConfig.swift */,
+				56C347F62923CAC300F60604 /* Assets.xcassets */,
+				56121C2D29E2ED7F0055BD28 /* Extensions */,
+				56121C3029E2EF010055BD28 /* Mocks & Stubs */,
+				56121C2029E2702A0055BD28 /* Models */,
+				56C347F82923CAC300F60604 /* Preview Content */,
+				56C347F22923CAC300F60604 /* Realtime_DemoApp.swift */,
+				56121C2829E272A10055BD28 /* Services */,
+				56121C2329E270670055BD28 /* View Models */,
+				56121C1D29E26FC70055BD28 /* Views */,
+				56121C3329E2F59E0055BD28 /* Utils.swift */,
 			);
 			path = "Realtime Demo";
 			sourceTree = "<group>";
@@ -280,10 +355,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				56049E3829A20E4D00E8E551 /* WebSocketView.swift in Sources */,
+				56121C2A29E272AF0055BD28 /* StocksAPI.swift in Sources */,
 				56C347F52923CAC300F60604 /* ContentView.swift in Sources */,
+				56121C3429E2F59E0055BD28 /* Utils.swift in Sources */,
 				56049E3629A20BE400E8E551 /* HTTPView.swift in Sources */,
 				56C347F32923CAC300F60604 /* Realtime_DemoApp.swift in Sources */,
 				562EA7E929A2131D00F781CE /* APIConfig.swift in Sources */,
+				56121C3229E2EF1D0055BD28 /* Chart_Stubs.swift in Sources */,
+				56121C2529E270750055BD28 /* ChartViewModel.swift in Sources */,
+				56121C1F29E26FD40055BD28 /* ChartView.swift in Sources */,
+				56121C2F29E2ED8C0055BD28 /* Foundation+Extensions.swift in Sources */,
+				56121C2729E271610055BD28 /* FetchPhase.swift in Sources */,
+				56121C2C29E272F30055BD28 /* Chart.swift in Sources */,
+				56121C2229E2703A0055BD28 /* ChartViewData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
