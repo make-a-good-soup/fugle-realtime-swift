@@ -9,20 +9,20 @@ public protocol APIRouter {
     var url: URL { get }
 }
 
-extension APIRouter {
-    public var scheme: String { "https" }
+public extension APIRouter {
+    var scheme: String { "https" }
 
-    public var host: String  { "api.fugle.tw" }
+    var host: String { "api.fugle.tw" }
 
-    public var basePath: String { "/realtime/v0.3/intraday" }
+    var basePath: String { "/realtime/v0.3/intraday" }
 
-    public var url: URL {
+    var url: URL {
         var components = URLComponents()
         components.scheme = scheme
         components.host = host
         components.path = basePath + path
 
-        if let parameters = parameters {
+        if let parameters {
             components.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
         }
 

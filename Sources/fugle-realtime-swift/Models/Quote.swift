@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Nick Chen on 2022/12/25.
 //
@@ -90,4 +90,3 @@ struct TradingCurb: Codable {
     let isCurbed: Bool // 是否進入瞬間價格穩定措施
     let at: String // 進入瞬間價格穩定措施或恢復逐筆交易時間
 }
-

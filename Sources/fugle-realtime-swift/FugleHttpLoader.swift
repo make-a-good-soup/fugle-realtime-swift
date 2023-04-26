@@ -2,17 +2,17 @@ import Foundation
 
 public class FugleHttpLoader {
     private let httpClient: HTTPClient
-    
+
     public init(httpClient: HTTPClient = URLSessionHTTPClient()) {
         self.httpClient = httpClient
     }
-    
+
     public func loadMeta(token: String, symbolId: String) async -> Result<Intraday<MetaData>, Error> {
         let parameters = ["symbolId": symbolId, "apiToken": token]
         let url = IntradayRouter.meta(parameters: parameters).url
-        
+
         let result = await httpClient.perform(url: url)
-        
+
         switch result {
         case let .success((data, _)):
             do {
@@ -21,12 +21,12 @@ public class FugleHttpLoader {
             } catch {
                 return .failure(error)
             }
-            
+
         case let .failure(error):
             return .failure(error)
         }
     }
-    
+
     /// 提供盤中個股/指數逐筆交易金額、狀態、最佳五檔及統計資訊
     ///
     /// - Parameters:
@@ -37,7 +37,7 @@ public class FugleHttpLoader {
     public func loadQuote(token: String, symbolId: String, oddLot: Bool = false) async -> Result<Intraday<QuoteData>, Error> {
         let parameters = ["symbolId": symbolId, "apiToken": token, "oddLot": String(oddLot)]
         let url = IntradayRouter.quote(parameters: parameters).url
-        
+
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             let quote = try JSONDecoder().decode(Intraday<QuoteData>.self, from: data)
@@ -46,11 +46,11 @@ public class FugleHttpLoader {
             return .failure(error)
         }
     }
-    
+
     public func loadChart(token: String, symbolId: String) async -> Result<Intraday<ChartData>, Error> {
         let parameters = ["symbolId": symbolId, "apiToken": token]
         let url = IntradayRouter.chart(parameters: parameters).url
-        
+
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             let chart = try JSONDecoder().decode(Intraday<ChartData>.self, from: data)
@@ -59,7 +59,7 @@ public class FugleHttpLoader {
             return .failure(error)
         }
     }
-    
+
     /// 取得個股當日所有成交資訊（ex: 個股價量、大盤總量）
     ///
     /// - Parameters:
@@ -72,7 +72,7 @@ public class FugleHttpLoader {
     public func loadDealts(token: String, symbolId: String, limit: Int = 50, offset: Int = 0, oddLot: Bool = false) async -> Result<Intraday<DealtsData>, Error> {
         let parameters = ["symbolId": symbolId, "apiToken": token, "limit": String(limit), "offset": String(offset), "oddLot": String(oddLot)]
         let url = IntradayRouter.dealts(parameters: parameters).url
-        
+
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             let dealts = try JSONDecoder().decode(Intraday<DealtsData>.self, from: data)
@@ -81,7 +81,7 @@ public class FugleHttpLoader {
             return .failure(error)
         }
     }
-    
+
     /// 提供盤中個股即時分價量
     ///
     /// - Parameters:
@@ -92,7 +92,7 @@ public class FugleHttpLoader {
     public func loadVolumes(token: String, symbolId: String, oddLot: Bool = false) async -> Result<Intraday<VolumesData>, Error> {
         let parameters = ["symbolId": symbolId, "apiToken": token, "oddLot": String(oddLot)]
         let url = IntradayRouter.volumes(parameters: parameters).url
-        
+
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             let volumes = try JSONDecoder().decode(Intraday<VolumesData>.self, from: data)

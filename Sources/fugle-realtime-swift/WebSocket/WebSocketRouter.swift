@@ -4,7 +4,7 @@ import Foundation
 
 public enum WebSocketRouter {
     public typealias Parameters = [String: String]
-    
+
     case meta(parameters: Parameters)
     case chart(parameters: Parameters)
     // case quote(parameters: Parameters)
@@ -12,8 +12,8 @@ public enum WebSocketRouter {
 
 extension WebSocketRouter: APIRouter {
     public var scheme: String { "wss" }
-    
-    public var parameters: [String : String]? {
+
+    public var parameters: [String: String]? {
         switch self {
         case let .meta(parameters):
             return parameters
@@ -21,7 +21,7 @@ extension WebSocketRouter: APIRouter {
             return parameters
         }
     }
-    
+
     public var path: String {
         switch self {
         case .meta:

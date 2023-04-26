@@ -21,7 +21,7 @@ public class WebSocketStream {
 
 extension WebSocketStream: AsyncSequence {
     public func makeAsyncIterator() -> AsyncIterator {
-        guard let stream = stream else {
+        guard let stream else {
             fatalError("stream was not initialized")
         }
         socket.resume()
@@ -32,10 +32,10 @@ extension WebSocketStream: AsyncSequence {
     private func listenForMessages() {
         socket.receive { [unowned self] result in
             switch result {
-            case .success(let message):
+            case let .success(message):
                 continuation?.yield(message)
                 listenForMessages()
-            case .failure(let error):
+            case let .failure(error):
                 continuation?.finish(throwing: error)
             }
         }
