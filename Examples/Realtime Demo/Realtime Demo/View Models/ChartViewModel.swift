@@ -17,8 +17,7 @@ class ChartViewModel: ObservableObject {
 
     private let dateFormatter = DateFormatter()
 
-    // FIXME: 使用真實網址
-    init(apiService: StocksAPI = WebSocketStream(url: URL(string: "www.google.com")!)) {
+    init(apiService: StocksAPI = WebSocketStream(url: WebSocketRouter.chart(parameters: ["symbolId": APIConfig.demo.symbolId, "apiToken": APIConfig.demo.apiToken]).url)) {
         self.apiService = apiService
     }
 

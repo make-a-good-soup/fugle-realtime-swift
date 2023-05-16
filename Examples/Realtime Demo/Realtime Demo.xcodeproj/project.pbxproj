@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		56049E3629A20BE400E8E551 /* HTTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56049E3529A20BE400E8E551 /* HTTPView.swift */; };
-		56049E3829A20E4D00E8E551 /* WebSocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56049E3729A20E4D00E8E551 /* WebSocketView.swift */; };
 		56121C1F29E26FD40055BD28 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56121C1E29E26FD40055BD28 /* ChartView.swift */; };
 		56121C2229E2703A0055BD28 /* ChartViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56121C2129E2703A0055BD28 /* ChartViewData.swift */; };
 		56121C2529E270750055BD28 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56121C2429E270750055BD28 /* ChartViewModel.swift */; };
@@ -48,7 +47,6 @@
 
 /* Begin PBXFileReference section */
 		56049E3529A20BE400E8E551 /* HTTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPView.swift; sourceTree = "<group>"; };
-		56049E3729A20E4D00E8E551 /* WebSocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketView.swift; sourceTree = "<group>"; };
 		56121C1E29E26FD40055BD28 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		56121C2129E2703A0055BD28 /* ChartViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewData.swift; sourceTree = "<group>"; };
 		56121C2429E270750055BD28 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
@@ -100,6 +98,8 @@
 		56121C1D29E26FC70055BD28 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				56C347F42923CAC300F60604 /* ContentView.swift */,
+				56049E3529A20BE400E8E551 /* HTTPView.swift */,
 				56121C1E29E26FD40055BD28 /* ChartView.swift */,
 			);
 			path = Views;
@@ -171,9 +171,6 @@
 		56C347F12923CAC300F60604 /* Realtime Demo */ = {
 			isa = PBXGroup;
 			children = (
-				56C347F42923CAC300F60604 /* ContentView.swift */,
-				56049E3529A20BE400E8E551 /* HTTPView.swift */,
-				56049E3729A20E4D00E8E551 /* WebSocketView.swift */,
 				562EA7E829A2131D00F781CE /* APIConfig.swift */,
 				56C347F62923CAC300F60604 /* Assets.xcassets */,
 				56121C2D29E2ED7F0055BD28 /* Extensions */,
@@ -354,7 +351,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56049E3829A20E4D00E8E551 /* WebSocketView.swift in Sources */,
 				56121C2A29E272AF0055BD28 /* StocksAPI.swift in Sources */,
 				56C347F52923CAC300F60604 /* ContentView.swift in Sources */,
 				56121C3429E2F59E0055BD28 /* Utils.swift in Sources */,
