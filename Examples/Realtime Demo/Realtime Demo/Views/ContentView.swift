@@ -8,7 +8,7 @@ struct ContentView: View {
 
     private let httpView: HTTPView = HTTPView(config: .demo)
 
-    private let WwebSocketView: WebSocketView = WebSocketView(config: .demo)
+    @StateObject var vm = ChartViewModel()
 
     var body: some View {
         TabView {
@@ -21,9 +21,15 @@ struct ContentView: View {
                 Label("HTTP", systemImage: "network")
             }
 
-            WwebSocketView.tabItem {
-                Label("WebSocket", systemImage: "antenna.radiowaves.left.and.right")
+            VStack {
+                if let chartViewData = vm.chart {
+                    Text(APIConfig.demo.symbolId)
+                    ChartView(data: chartViewData, vm: vm).padding()
+                }
             }
+            .tabItem {
+                Label("WebSocket", systemImage: "antenna.radiowaves.left.and.right")
+            }.task { await vm.fetchData() }
         }.accentColor(.black)
     }
 }

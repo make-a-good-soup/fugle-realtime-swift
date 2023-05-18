@@ -6,7 +6,6 @@ struct Utils {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.currencySymbol = ""
-        formatter.currencyDecimalSeparator = ","
         formatter.minimumFractionDigits = 2
         formatter.maximumFractionDigits = 2
         return formatter

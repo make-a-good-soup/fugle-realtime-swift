@@ -81,7 +81,6 @@ struct ChartData: Decodable {
 }
 
 struct ChartMeta: Decodable {
-
     let currency: String
     let symbol: String
     let regularMarketPrice: Double?
@@ -122,6 +121,16 @@ struct ChartMeta: Decodable {
         let regularTradingPeriodContainer = try? currentTradingPeriodContainer?.nestedContainer(keyedBy: TradingPeriodKeys.self, forKey: .regular)
         self.regularTradingPeriodStartDate = try regularTradingPeriodContainer?.decode(Date.self, forKey: .start) ?? Date()
         self.regularTradingPeriodEndDate = try regularTradingPeriodContainer?.decode(Date.self, forKey: .end) ?? Date()
+    }
+
+    public init(currency: String, symbol: String, regularMarketPrice: Double? = nil, previousClose: Double? = nil, gmtOffset: Int, regularTradingPeriodStartDate: Date, regularTradingPeriodEndDate: Date) {
+        self.currency = currency
+        self.symbol = symbol
+        self.regularMarketPrice = regularMarketPrice
+        self.previousClose = previousClose
+        self.gmtOffset = gmtOffset
+        self.regularTradingPeriodStartDate = regularTradingPeriodStartDate
+        self.regularTradingPeriodEndDate = regularTradingPeriodEndDate
     }
 }
 
